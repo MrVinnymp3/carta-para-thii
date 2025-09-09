@@ -59,7 +59,7 @@ musicBtn.addEventListener("click", () => {
     });
 
     function verificarSenha() {
-  const senhaCorreta = "12345"; // 🔒 Defina sua senha aqui
+  const senhaCorreta = "21062025";
   const senhaDigitada = document.getElementById("senha-input").value;
 
   if (senhaDigitada === senhaCorreta) {
@@ -68,3 +68,4 @@ musicBtn.addEventListener("click", () => {
     document.getElementById("erro").textContent = "Senha incorreta!";
   }
 }
+
