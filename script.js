@@ -57,3 +57,14 @@ musicBtn.addEventListener("click", () => {
         setTimeout(() => confetti.remove(), 3000);
       }
     });
+
+    function verificarSenha() {
+  const senhaCorreta = "12345"; // 🔒 Defina sua senha aqui
+  const senhaDigitada = document.getElementById("senha-input").value;
+
+  if (senhaDigitada === senhaCorreta) {
+    document.getElementById("senha-overlay").style.display = "none";
+  } else {
+    document.getElementById("erro").textContent = "Senha incorreta!";
+  }
+}
