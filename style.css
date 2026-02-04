@@ -1,190 +1,32 @@
-
-    body {
-      background: linear-gradient(135deg, #fff0f6, #ffe6ec);
-      color: #5a2a2a;
-      padding: 0 15px;
-      overflow-x: hidden;
-      cursor: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') 16 16, auto;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      font-family: 'Great Vibes', cursive;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: #c2185b;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-      text-shadow: 0 0 15px rgba(194, 24, 91, 0.5);
-    }
-
-    header h1.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      font-size: 1.2rem;
-      line-height: 1.8;
-      position: relative;
-      z-index: 1;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    p {
-      margin: 35px 0;
-      text-indent: 30px; /* Espaço no início do parágrafo */
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-      text-shadow: 0 0 10px rgba(255, 105, 135, 0.3);
-      position: relative;
-    }
-
-    p.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    p::after {
-      content: "❤️";
-      position: absolute;
-      right: -30px;
-      bottom: 0;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.8s ease;
-    }
-
-    p.show::after {
-      opacity: 1;
-      transform: translateY(-10px);
-    }
-
-
-    #music-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #c2185b;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 50px;
-      cursor: pointer;
-      font-size: 1rem;
-      z-index: 10;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    #final-btn {
-      display: block;
-      margin: 60px auto;
-      padding: 15px 25px;
-      font-size: 1.4rem;
-      background: #ff4d6d;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      z-index: 1;
-      position: relative;
-    }
-
-    #final-btn:hover {
-      transform: scale(1.1);
-      background: #e60050;
-    }
-
-    .heart {
-      position: fixed;
-      bottom: -20px;
-      color: #ff4d6d;
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.7;
-      z-index: 0;
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 0.7; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
-    }
-
-    .confetti {
-      position: fixed;
-      font-size: 20px;
-      animation: fall 3s linear forwards;
-      z-index: 100;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-    }
-
-    #senha-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 240, 246, 0.98);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* garante que fica acima de tudo */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#senha-box {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#senha-box h2 {
-  margin-bottom: 15px;
-  color: #c2185b;
-}
+#dvd {
+  position: absolute;
+  max-width: 70vw;          /* limita largura para quebrar linhas */
+  padding: 16px 20px;
 
-#senha-box input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-#senha-box button {
-  padding: 10px 20px;
-  background: #c2185b;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.4;
+
+  text-align: center;       /* centraliza texto */
+  white-space: normal;      /* permite quebra de linha */
+
+  user-select: none;
+  pointer-events: none;
 }
 
-#senha-box button:hover {
-  background: #a31549;
-}
-
-#erro {
-  color: red;
-  margin-top: 10px;
-}
